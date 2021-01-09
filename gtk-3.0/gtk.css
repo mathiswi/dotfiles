@@ -1,0 +1,9 @@
+.window-frame {
+  box-shadow: none;
+  margin: 0;
+}
+
+calendar {
+  font-size: 28px;
+  padding: 24px;
+}

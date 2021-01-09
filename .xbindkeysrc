@@ -1,0 +1,7 @@
+# thumb wheel up => increase volume and unmute      
+"xbacklight +10"
+   b:7                               
+                                        
+# thumb wheel down => lower volume       
+"xbacklight -10"       
+   b:6                                  

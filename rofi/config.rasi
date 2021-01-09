@@ -1,0 +1,10 @@
+configuration {
+		modi: ":greenclip print,drun";
+}
+
+/*
+*  clipboard symbol
+*/
+
+@import "~/.config/rofi/themes/launcher.rasi"
+ 

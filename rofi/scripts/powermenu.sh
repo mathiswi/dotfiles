@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+## Author  : Aditya Shakya
+## Mail    : adi1090x@gmail.com
+## Github  : @adi1090x
+## Twitter : @adi1090x
+
+dir="~/.config/rofi/"
+
+rofi_command="rofi -theme $dir/themes/powermenu.rasi"
+
+# Options
+shutdown=" Shutdown"
+reboot=" Restart"
+lock=" Lock"
+suspend=" Sleep"
+logout=" Logout"
+
+
+# Message
+msg() {
+	rofi -theme "$dir/message.rasi" -e "Available Options  -  yes / y / no / n"
+}
+
+# Variable passed to rofi
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_command -p "Powermenu" -dmenu -selected-row 0)"
+case $chosen in
+    $shutdown)
+			systemctl poweroff
+        ;;
+    $reboot)
+			systemctl reboot
+        ;;
+    $lock)
+			playerctl pause
+			amixer set Master mute
+			betterlockscreen -l dim
+      	;;
+    $suspend)
+			playerctl pause
+			amixer set Master mute
+			systemctl suspend
+        ;;
+    $logout)
+			bspc quit
+        ;;
+esac
