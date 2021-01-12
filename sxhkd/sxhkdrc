@@ -122,8 +122,8 @@ super + {1-9,0}
 	bspc desktop -f ^{1-9,10}
 
 # Move window to desktop and follow
-super + shift + {1-9, 0}
-  id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
+super + shift + {1-9,0}
+  id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
 
 
 
