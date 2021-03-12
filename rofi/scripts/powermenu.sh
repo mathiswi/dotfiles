@@ -5,9 +5,9 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="~/.config/rofi/"
+dir="~/.config/rofi/themes/forest"
 
-rofi_command="rofi -theme $dir/themes/powermenu.rasi"
+rofi_command="rofi -theme $dir/powermenu.rasi"
 
 # Options
 shutdown=" Shutdown"
@@ -25,7 +25,7 @@ msg() {
 # Variable passed to rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-chosen="$(echo -e "$options" | $rofi_command -p "Powermenu" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -p "" -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
 			systemctl poweroff

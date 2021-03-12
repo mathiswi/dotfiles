@@ -6,5 +6,7 @@ configuration {
 *  clipboard symbol
 */
 
-@import "~/.config/rofi/themes/launcher.rasi"
+
+
+@import "~/.config/rofi/themes/forest/launcher.rasi"
  

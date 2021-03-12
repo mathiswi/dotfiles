@@ -6,6 +6,12 @@
 * Optimized for a 4k screen
 
 
+## Themes
+
+* Mostly Nord
+* GTK Arc-Dark ([https://github.com/horst3180/arc-theme](https://github.com/horst3180/arc-theme))
+
+
 
 ## Grub
 
@@ -90,9 +96,3 @@ systemctl --user enable xbacklightmon.service
 echo deep|sudo tee /sys/power/mem_sleep
 ```
 
-## Powertop
-```
-sudo pacman -S powertop && \
-sudo cp powertop.service /usr/lib/systemd/user && \
-systemctl --user enable powertop.service
-```

@@ -8,8 +8,6 @@ super + shift + r
 
 ### APPLICATIONS ####
 
-
-
 super + space
 	rofi -show drun
 
@@ -62,6 +60,7 @@ super + shift + q
 # Force all windows of the desktop to tile
 super + ctrl + t
 	bspcp tile
+
 # Force all windows of the desktop to float and arrange them
 super + ctrl + shift + t
 	bspcp float
@@ -78,15 +77,15 @@ super + o
 super + i
 	bspc node -g sticky
 
+#Restore Window size
+super + r
+	bspc node @/ -E
+
 
 
 #
 # Window moving and splitting
 # ______________    
-
-# Autopresel (split window in its largest dimension)
-ctrl + space
-	auto-presel
 	
 # Presel window for splitting in certain direction
 alt + ctrl + {a,s,w,d}
@@ -107,6 +106,7 @@ alt + ctrl + {Left,Down,Up,Right}
 
 # alt + shift + {Left,Down,Up,Right}
 	# bspc node @/ -p \~{west,south,north,east}
+
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -123,7 +123,7 @@ super + {1-9,0}
 
 # Move window to desktop and follow
 super + shift + {1-9,0}
-  id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
+  id=$(bspc query -N -n); bspc node -d ^{1-9,0}; bspc node -f ${id}
 
 
 
@@ -151,7 +151,6 @@ super + shift + {a,s,w,d}
 
 #super + shift + {h,j,k,l}
 #	windowgrabber {west,south,north,east}
-	
 # Different style of movement: transplant into window in chosen direction
 super + shift + {Left,Down,Up,Right}
 	euclid_mover {west,south,north,east}
@@ -184,17 +183,6 @@ super + shift + {comma,period}
 	bspc node @/ -R {90,270}
 
 
-#
-# Touchpad "gestures" (depend on your touchpad driver, very likely to be unavailable)
-#_____________________
-    
-#
-# spawn programs
-#
-
-
-
-	
 #
 # Media keys
 #
@@ -237,3 +225,9 @@ super + ctrl + space
 # Remove receptacles
 super + BackSpace
   for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
+
+# Equal width
+super + b
+	for wid in $(bspc query -N -d -n .window); do
+		bspc node "${wid}#@north" -B
+	done
