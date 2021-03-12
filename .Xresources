@@ -1,6 +1,6 @@
 ! Colorscheme
 
-#include "colorschemes/teal"
+#include "colorschemes/nord"
 
 
 Xft.dpi:       168
