@@ -403,9 +403,7 @@ toolbarseparator {
 	transition: all .1s var(--ease-basic) !important;
 }
 
-:root:not([customizing]) :hover > #nav-bar toolbarbutton,
-:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
-:root:not([customizing]) :hover > #titlebar toolbarbutton {
+#nav-bar:not([customizing]) :hover > toolbarbutton {
   transform: scale(1, 1) !important;
   opacity:1 !important;
   margin-left:12px !important;
