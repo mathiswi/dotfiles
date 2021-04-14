@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-sudo pacman -S -y --noconfirm yay inotify-tools bc && 
 
 init() {
   echo "Creating Projects folder if it doesn't already exist"
@@ -10,7 +9,7 @@ init() {
 }
 
 install_packages() {
-  echo "Installing packages"
+  echo $'\n### Installing packages ###\n'
   # Package manager
   pacman -S yay --noconfirm
   # Application launcher & several other menus
@@ -40,6 +39,7 @@ install_packages() {
 }
 
 link_config() {
+  echo $'\n### Linking Config ###\n'
   ln -sv ~/Projects/dotfiles/bspwm ~/.config
   ln -sv ~/Projects/dotfiles/colorschemes ~/.config
   ln -sv ~/Projects/dotfiles/networkmanager-dmenu ~/.config
@@ -60,30 +60,31 @@ enable_services() {
 }
 
 misc() {
+  echo $'\n### Misc ###\n'
   # Set wallpaper of lockscreen
-  betterlockscreen -u ~/.config/wallpaper/wallpaper.jpg &&
+  #betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
   # merge .Xresources
-  xrdb merge ~/.config/.Xresources
+  #xrdb merge ~/.config/.Xresources
   # restart bspwmrc
-  ~/.config/bspwm/bspwmrc
+  #~/.config/bspwm/bspwmrc
   # copy spotify desktop file (4k screen resolution fix)
-  cp spotify.desktop /usr/share/applications/
+  #sudo cp spotify.desktop /usr/share/applications/
 }
 
 init_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
-  cp .zshrc 
+  cp .zshrc ~/
 }
 
 # Fix for backlight control for OLED Panel
 backlight_fix() {
-  pacman -S inotify-tools bc
-  cp xbacklightmon /usr/local/bin 
-  chown root:root /usr/local/bin/xbacklightmon 
-  chmod 755 /usr/local/bin/xbacklightmon 
-  cp xbacklightmon.service /usr/lib/systemd/user 
-  systemctl enable xbacklightmon.service 
-  systemctl start xbacklightmon.service 
+  echo $'\n### Fixing Backlight ###\n'
+  sudo pacman -S inotify-tools bc --noconfirm
+  sudo cp xbacklightmon /usr/local/bin 
+  sudo chown root:root /usr/local/bin/xbacklightmon 
+  sudo chmod 755 /usr/local/bin/xbacklightmon 
+  sudo cp xbacklightmon.service /usr/lib/systemd/user 
+  systemctl --user enable --now xbacklightmon.service 
   xbacklight +50 
 }
 
