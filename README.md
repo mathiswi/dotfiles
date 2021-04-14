@@ -1,6 +1,6 @@
-# dotfiles
+# my dotfiles
 
-* WIP
+* WIP 
 * bspwm & polybar
 * Credits to most of the polybar and rofi config go to [adi1090x](https://github.com/adi1090x/polybar-themes)
 * Optimized for a 4k screen
@@ -12,18 +12,18 @@
 * GTK Arc-Dark ([https://github.com/horst3180/arc-theme](https://github.com/horst3180/arc-theme))
 
 
-
-## Grub
+## Grub theme
 
 Change `GRUB_TIMEOUT=10` in  `/etc/default/grub` to 2. 
 
 ```
 git clone https://github.com/vinceliuice/grub2-themes.git ~/grub2-themes && \
-~/grub2-themes/install.sh --tela --4k 
+~/grub2-themes/install.sh --tela --4k && \
+sudo update-grup
 ```
 
 
-## Greeter
+## Greeter wallpaper
 
 ```
 sudo mkdir /etc/lightdm/wallpaper/ && \
@@ -36,7 +36,7 @@ background = /etc/lightdm/wallpaper/wallpaper.jpg
 ```
 
 
-## Spotify
+## Spotify themes
 
 [All Spicetify themes](https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview)
 ```
@@ -45,11 +45,9 @@ sudo chmod a+wr /opt/spotify && \
 sudo chmod a+wr /opt/spotify/Apps -R && \
 spicetify && \
 spicetify backup apply enable-devtool && \
-spicetify config current_theme Pop-Dark && \
+spicetify config current_theme Nord && \
 spicetify apply 
 ```
-
-Using a 4k Bildschirm `sudo cp spotify.desktop /usr/share/applications/`
 
 ## Touchpad & Mouse Speed 
  
