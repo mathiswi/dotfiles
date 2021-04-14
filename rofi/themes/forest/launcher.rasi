@@ -16,8 +16,10 @@ configuration {
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
+	sidebar-mode: 					true;
     dpi:                            168;
+    modi:                           ":greenclip print,drun";
+
 }
 
 @import "colors.rasi"
