@@ -12,7 +12,7 @@ ZSH_THEME="agnoster"
 
 DEFAULT_USER="mathis"
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 ## merge Xresources, useful for urxvt & rofi theming
 
@@ -29,7 +29,6 @@ alias loadnvm=". $HOME/.nvm/nvm.sh"
 alias merge="xrdb merge ~/.config/.Xresources"
 alias reload_bspwm="~/.config/bspwm/bspwmrc"
 alias bspwmrc="code ~/.config/bspwm/bspwmrc"
-
 # sdo() sudo zsh -c "$functions[$1]" "$@"
 
 # change_wallpaper() {
@@ -46,3 +45,5 @@ alias bspwmrc="code ~/.config/bspwm/bspwmrc"
 #   sed -i '$ d' /etc/lightdm/slick-greeter.conf &&
 #   echo "background = /etc/lightdm/wallpaper/wallpaper.jpg" > /etc/lightdm/slick-greeter.conf
 # }
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
