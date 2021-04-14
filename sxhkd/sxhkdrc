@@ -32,8 +32,12 @@ super + e
 Print
 	scrot
 
+### Power and locking ###
 super + Escape
 	~/.config/rofi/scripts/powermenu.sh
+
+super + l
+	betterlockscreen -l &
 
 
 #
