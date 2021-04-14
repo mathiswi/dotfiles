@@ -4,10 +4,12 @@
 ### AUTOSTART ###
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom &
-feh --bg-fill $HOME/.config/wallpaper/wallpaper.jpg &
+feh --bg-fill $HOME/.config/wallpaper/wallpaper.* &
 $HOME/.config/polybar/launch.sh &
+pgrep -x picom > /dev/null || picom &
 pgrep -x xbindkeys > /dev/null || xbindkeys &
+/usr/lib/kdeconnectd &
+#pgrep -x redshift > /dev/null || redshift &
 
 
 # bspc rule -a firefoxdeveloperedition state=floating rectangle=1920x1080+100+100
