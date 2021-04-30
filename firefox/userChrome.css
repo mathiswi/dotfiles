@@ -12,7 +12,7 @@
   --mff-tab-font-family: "Cantarell", sans;
   --mff-tab-font-size: 10pt;
   --mff-tab-font-weight: 400;
-  --mff-tab-height: 28px;
+  /* --mff-tab-height: 32px; */
   --mff-tab-pinned-bg: #70c1b3;
   --mff-tab-selected-bg: #5e81ac;
   --mff-tab-soundplaying-bg: #3b4252;
@@ -129,8 +129,8 @@ hbox.tab-content[pinned="true"] .tab-text {
   margin-bottom: 4px !important;
   margin-inline-end: 4px !important;
   margin-top: 4px !important;
-  max-height: var(--mff-tab-height) !important;
-  min-height: var(--mff-tab-height) !important;
+  /* max-height: var(--mff-tab-height) !important;
+  min-height: var(--mff-tab-height) !important; */
 }
 
 .tabbrowser-tab[soundplaying="true"] {
