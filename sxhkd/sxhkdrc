@@ -32,6 +32,9 @@ super + e
 Print
 	scrot
 
+super + shift + s
+	sleep 1 && scrot -s -e 'xclip -selection clipboard -t image/png < $f'
+
 ### Power and locking ###
 super + Escape
 	~/.config/rofi/scripts/powermenu.sh
