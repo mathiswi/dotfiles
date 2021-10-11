@@ -4,6 +4,7 @@
 
 
 Xft.dpi:       168
+!Xft.dpi:       196
 
 
 URxvt*dynamicColors: on

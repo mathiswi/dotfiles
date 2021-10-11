@@ -62,13 +62,13 @@ enable_services() {
 misc() {
   echo $'\n### Misc ###\n'
   # Set wallpaper of lockscreen
-  #betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
+  betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
   # merge .Xresources
-  #xrdb merge ~/.config/.Xresources
+  xrdb merge ~/.config/.Xresources
   # restart bspwmrc
-  #~/.config/bspwm/bspwmrc
+  ~/.config/bspwm/bspwmrc
   # copy spotify desktop file (4k screen resolution fix)
-  #sudo cp spotify.desktop /usr/share/applications/
+  sudo cp spotify.desktop /usr/share/applications/
 }
 
 init_zsh() {
@@ -92,5 +92,5 @@ init
 install_packages
 link_config
 misc
-backlight_fix
+# backlight_fix
 init_zsh
