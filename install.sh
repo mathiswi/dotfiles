@@ -6,6 +6,7 @@ init() {
   mkdir -p ~/Projects
   echo "Removing .Xresources in home directory"
   rm ~/.Xresources
+  rm -rf ~/.config/i3
 }
 
 install_packages() {
@@ -40,11 +41,14 @@ install_packages() {
   yay -S ttf-iosevka --noconfirm
   # spotify customization
   yay -S spicetify-cli spicetify-themes-git --noconfirm
+  # notification deamon
+  yay -S dunst --noconfirm
+  # urxvt terminal
+  yay -S rxvt-unicode --noconfirm 
 }
 
 link_config() {
   echo $'\n### Linking Config ###\n'
-  rm -rf ~/.config/i3
   ln -sv ~/dotfiles/i3 ~/.config
   ln -sv ~/dotfiles/colorschemes ~/.config
   ln -sv ~/dotfiles/networkmanager-dmenu ~/.config
