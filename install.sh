@@ -35,7 +35,7 @@ install_packages() {
   # lockscreen
   yay -S betterlockscreen --noconfirm
   # icon fonts
-  # yay -S nerd-fonts-source-code-pro --noconfirm
+  yay -S nerd-fonts-source-code-pro --noconfirm
   # terminal font
   yay -S ttf-iosevka --noconfirm
   # spotify customization
