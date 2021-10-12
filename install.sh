@@ -14,6 +14,8 @@ install_packages() {
   pacman -S yay --noconfirm
   # Application launcher & several other menus
   yay -S rofi --noconfirm
+  # i3-gaps-next
+  yay -S i3-gaps-next-git --noconfirm
   # zsh
   yay -S zsh --noconfirm
   # Clipboard manager
