@@ -14,6 +14,8 @@ install_packages() {
   pacman -S yay --noconfirm
   # Application launcher & several other menus
   yay -S rofi --noconfirm
+  # zsh
+  yay -S zsh --noconfirm
   # Clipboard manager
   yay -S rofi-greenclip --noconfirm
   # Status bar
@@ -31,7 +33,7 @@ install_packages() {
   # lockscreen
   yay -S betterlockscreen --noconfirm
   # icon fonts
-  yay -S nerd-fonts-source-code-pro --noconfirm
+  # yay -S nerd-fonts-source-code-pro --noconfirm
   # terminal font
   yay -S ttf-iosevka --noconfirm
   # spotify customization
@@ -40,17 +42,17 @@ install_packages() {
 
 link_config() {
   echo $'\n### Linking Config ###\n'
-  ln -sv ~/Projects/dotfiles/i3 ~/.config
-  ln -sv ~/Projects/dotfiles/colorschemes ~/.config
-  ln -sv ~/Projects/dotfiles/networkmanager-dmenu ~/.config
-  ln -sv ~/Projects/dotfiles/polybar ~/.config
-  ln -sv ~/Projects/dotfiles/rofi ~/.config
-  ln -sv ~/Projects/dotfiles/wallpaper ~/.config
-  ln -sv ~/Projects/dotfiles/greenclip.cfg ~/.config
-  ln -sv ~/Projects/dotfiles/picom.conf ~/.config
-  ln -sv ~/Projects/dotfiles/.Xresources ~/.config
-  ln -sv ~/Projects/dotfiles/.zshrc ~/
-  ln -sv ~/Projects/dotfiles/.xbindkeysrc ~/
+  ln -sv ~/dotfiles/i3 ~/.config
+  ln -sv ~/dotfiles/colorschemes ~/.config
+  ln -sv ~/dotfiles/networkmanager-dmenu ~/.config
+  ln -sv ~/dotfiles/polybar ~/.config
+  ln -sv ~/dotfiles/rofi ~/.config
+  ln -sv ~/dotfiles/wallpaper ~/.config
+  ln -sv ~/dotfiles/greenclip.cfg ~/.config
+  ln -sv ~/dotfiles/picom.conf ~/.config
+  ln -sv ~/dotfiles/.Xresources ~/.config
+  ln -sv ~/dotfiles/.zshrc ~/
+  ln -sv ~/dotfiles/.xbindkeysrc ~/
 }
 
 enable_services() {
