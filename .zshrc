@@ -27,8 +27,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias loadnvm=". $HOME/.nvm/nvm.sh"
 alias merge="xrdb merge ~/.config/.Xresources"
-alias reload_bspwm="~/.config/bspwm/bspwmrc"
-alias bspwmrc="code ~/.config/bspwm/bspwmrc"
 # sdo() sudo zsh -c "$functions[$1]" "$@"
 
 # change_wallpaper() {
