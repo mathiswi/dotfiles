@@ -1,0 +1,23 @@
+### i3-gaps CONFIG ###
+
+# Set inner/outer gaps
+gaps inner 8
+gaps outer 0
+
+# Turn off gaps
+bindsym $mod+Shift+g gaps inner all set 0, gaps outer all set 0
+# Turn on gaps
+bindsym $mod+g gaps inner all set 8, gaps outer all set 0
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
+
+
+floating_minimum_size 74 x 50
+floating_maximum_size 1920 x 1080
+
+
+workspace $ws3 output right
+workspace $ws6 output right
+workspace $ws9 output right
