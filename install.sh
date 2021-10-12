@@ -2,15 +2,15 @@
 
 
 init() {
-  echo "Creating Projects folder if it doesn't already exist"
+  echo -e "Creating Projects folder if it doesn't already exist"
   mkdir -p ~/Projects
-  echo "Removing .Xresources in home directory"
+  echo -e "Removing .Xresources in home directory"
   rm ~/.Xresources
   rm -rf ~/.config/i3
 }
 
 install_packages() {
-  echo $'\n### Installing packages ###\n'
+  echo -e $'\n### Installing packages ###\n'
   # Package manager
   pacman -S yay --noconfirm
   # Application launcher & several other menus
@@ -45,10 +45,12 @@ install_packages() {
   yay -S dunst --noconfirm
   # urxvt terminal
   yay -S rxvt-unicode --noconfirm 
+  # scroll tool for spotify polybar
+  yay -S zscroll --noconfirm
 }
 
 link_config() {
-  echo $'\n### Linking Config ###\n'
+  echo -e $'\n### Linking Config ###\n'
   ln -sv ~/dotfiles/i3 ~/.config
   ln -sv ~/dotfiles/colorschemes ~/.config
   ln -sv ~/dotfiles/networkmanager-dmenu ~/.config
@@ -68,9 +70,9 @@ enable_services() {
 }
 
 misc() {
-  echo $'\n### Misc ###\n'
+  echo -e $'\n### Misc ###\n'
   # Set wallpaper of lockscreen
-  betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
+  # betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
   # merge .Xresources
   xrdb merge ~/.config/.Xresources
   # restart i3
@@ -80,13 +82,12 @@ misc() {
 }
 
 init_zsh() {
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
-  cp .zshrc ~/
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 # Fix for backlight control for OLED Panel
 backlight_fix() {
-  echo $'\n### Fixing Backlight ###\n'
+  echo -e $'\n### Fixing Backlight ###\n'
   sudo pacman -S inotify-tools bc --noconfirm
   sudo cp xbacklightmon /usr/local/bin 
   sudo chown root:root /usr/local/bin/xbacklightmon 
@@ -96,9 +97,23 @@ backlight_fix() {
   xbacklight +50 
 }
 
+# Install Fonts
+install_fonts() {
+  FDIR="$HOME/.local/share/fonts"
+	echo -e $'\n### Installing Fonts ###\n'
+	if [[ -d "$FDIR" ]]; then
+		cp -rf $DIR/fonts/* "$FDIR"
+	else
+		mkdir -p "$FDIR"
+		cp -rf ./fonts/* "$FDIR"
+	fi
+}
+
+
 init
 install_packages
 link_config
 misc
+install_fonts
 # backlight_fix
 init_zsh
