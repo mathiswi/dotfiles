@@ -44,6 +44,7 @@ install_packages() {
 
 link_config() {
   echo $'\n### Linking Config ###\n'
+  rm -rf ~/.config/i3
   ln -sv ~/dotfiles/i3 ~/.config
   ln -sv ~/dotfiles/colorschemes ~/.config
   ln -sv ~/dotfiles/networkmanager-dmenu ~/.config
