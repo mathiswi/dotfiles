@@ -40,12 +40,11 @@ install_packages() {
 
 link_config() {
   echo $'\n### Linking Config ###\n'
-  ln -sv ~/Projects/dotfiles/bspwm ~/.config
+  ln -sv ~/Projects/dotfiles/i3 ~/.config
   ln -sv ~/Projects/dotfiles/colorschemes ~/.config
   ln -sv ~/Projects/dotfiles/networkmanager-dmenu ~/.config
   ln -sv ~/Projects/dotfiles/polybar ~/.config
   ln -sv ~/Projects/dotfiles/rofi ~/.config
-  ln -sv ~/Projects/dotfiles/sxhkd ~/.config
   ln -sv ~/Projects/dotfiles/wallpaper ~/.config
   ln -sv ~/Projects/dotfiles/greenclip.cfg ~/.config
   ln -sv ~/Projects/dotfiles/picom.conf ~/.config
@@ -65,8 +64,8 @@ misc() {
   betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
   # merge .Xresources
   xrdb merge ~/.config/.Xresources
-  # restart bspwmrc
-  ~/.config/bspwm/bspwmrc
+  # restart i3
+  i3-msg restart
   # copy spotify desktop file (4k screen resolution fix)
   sudo cp spotify.desktop /usr/share/applications/
 }
