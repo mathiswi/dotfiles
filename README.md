@@ -18,8 +18,8 @@ Change `GRUB_TIMEOUT=10` in  `/etc/default/grub` to 2.
 
 ```
 git clone https://github.com/vinceliuice/grub2-themes.git ~/grub2-themes && \
-~/grub2-themes/install.sh --tela --4k && \
-sudo update-grup
+sudo ~/grub2-themes/install.sh -t slaze -s 4k && \
+sudo update-grub
 ```
 
 
@@ -27,7 +27,7 @@ sudo update-grup
 
 ```
 sudo mkdir /etc/lightdm/wallpaper/ && \
-sudo cp ~/wallpaper/wallpaper.jpg /etc/lightdm/wallpaper/wallpaper.jpg
+sudo cp ~/config/wallpaper.jpg /etc/lightdm/wallpaper/wallpaper.jpg
 ```
 Change wallpaper in `/etc/lightdm/slick-greeter.conf`
 
