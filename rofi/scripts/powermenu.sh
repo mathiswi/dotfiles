@@ -44,6 +44,11 @@ case $chosen in
 			systemctl suspend
         ;;
     $logout)
-			bspc quit
+			if [[ "$DESKTOP_SESSION" == "Openbox" ]]; then
+				openbox --exit
+			elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+				bspc quit
+			elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
+				i3-msg exit
         ;;
 esac
