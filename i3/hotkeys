@@ -162,16 +162,16 @@ bindsym --whole-window $mod+button2 kill
 bindsym $mod+Return exec urxvtc; workspace $ws3
 
 # start program launcher
-bindsym $mod+space exec --no-startup-id rofi -show drun
+bindsym $mod+space exec --no-startup-id rofi -show drun -theme ~/.config/rofi/themes/forest/launcher.rasi
 
 # show rofi clipboard manager
-bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+v exec --no-startup-id rofi -theme ~/.config/rofi/themes/forest/launcher.rasi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id "playerctl pause && betterlockscreen -l dim"
+bindsym $mod+l exec --no-startup-id "playerctl pause ; betterlockscreen -l dim"
 
 # launch firefox
-bindsym $mod+F1 exec firefox-developer-edition; workspace $ws3
+bindsym $mod+F1 exec firefox-developer-edition; workspace $ws1
 
 # launch vscode
 bindsym $mod+F2 exec code; workspace $ws2
@@ -183,7 +183,7 @@ bindsym $mod+F11 exec i3keybindingsmenu
 bindsym $mod+F10 exec i3layoutmenu
 
 # open powermenu
-bindsym $mod+Escape exec powermenu
+bindsym $mod+Escape exec ~/.config/rofi/scripts/powermenu.sh
 
 # change borders
 bindsym $mod+u border none
