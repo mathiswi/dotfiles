@@ -1,19 +1,18 @@
-$DOT_DIR=$HOME/dotfiles
-$
+
 link_config() {
   echo -e $'\n### Linking Config ###\n'
-  ln -sv $DOT_DIR/i3 ~/.config
-  ln -sv $DOT_DIR/colorschemes ~/.config
-  ln -sv $DOT_DIR/networkmanager-dmenu ~/.config
-  ln -sv $DOT_DIR/polybar ~/.config
-  ln -sv $DOT_DIR/rofi ~/.config
-  ln -sv $DOT_DIR/wallpaper ~/.config
-  ln -sv $DOT_DIR/greenclip.toml ~/.config
-  ln -sv $DOT_DIR/picom.conf ~/.config
-  ln -sv $DOT_DIR/.Xresources ~/.config
-  ln -sv $DOT_DIR/dunst ~/.config
-  ln -sv $DOT_DIR/.xbindkeysrc ~/
-  ln -sv $DOT_DIR/.zshrc ~/
+  ln -sv ~/dotfiles/i3 ~/.config/
+  ln -sv ~/dotfiles/colorschemes ~/.config/
+  ln -sv ~/dotfiles/networkmanager-dmenu ~/.config/
+  ln -sv ~/dotfiles/polybar ~/.config/
+  ln -sv ~/dotfiles/rofi ~/.config/
+  ln -sv ~/dotfiles/wallpaper ~/.config/
+  ln -sv ~/dotfiles/greenclip.toml ~/.config/
+  ln -sv ~/dotfiles/picom.conf ~/.config/
+  ln -sv ~/dotfiles/.Xresources ~/.config/
+  ln -sv ~/dotfiles/dunst ~/.config/
+  ln -sv ~/dotfiles/.xbindkeysrc ~/
+  ln -sv ~/dotfiles/.zshrc ~/
 }
 
 link_config
