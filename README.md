@@ -45,8 +45,10 @@ sudo chmod a+wr /opt/spotify && \
 sudo chmod a+wr /opt/spotify/Apps -R && \
 spicetify && \
 spicetify backup apply enable-devtool && \
-spicetify config current_theme Nord && \
-spicetify apply 
+spicetify config current_theme Sleek && \
+spicetify apply  && \
+spicetify config color_theme nord && \
+spicetify apply
 ```
 
 ## Touchpad & Mouse Speed 
