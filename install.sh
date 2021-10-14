@@ -49,20 +49,6 @@ install_packages() {
   yay -S zscroll --noconfirm
 }
 
-link_config() {
-  echo -e $'\n### Linking Config ###\n'
-  ln -sv ~/dotfiles/i3 ~/.config
-  ln -sv ~/dotfiles/colorschemes ~/.config
-  ln -sv ~/dotfiles/networkmanager-dmenu ~/.config
-  ln -sv ~/dotfiles/polybar ~/.config
-  ln -sv ~/dotfiles/rofi ~/.config
-  ln -sv ~/dotfiles/wallpaper ~/.config
-  ln -sv ~/dotfiles/greenclip.cfg ~/.config
-  ln -sv ~/dotfiles/picom.conf ~/.config
-  ln -sv ~/dotfiles/.Xresources ~/.config
-  ln -sv ~/dotfiles/.zshrc ~/
-  ln -sv ~/dotfiles/.xbindkeysrc ~/
-}
 
 enable_services() {
   systemctl --user enable greenclip.service 
@@ -112,7 +98,7 @@ install_fonts() {
 
 init
 install_packages
-link_config
+
 misc
 install_fonts
 # backlight_fix
