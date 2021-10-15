@@ -12,7 +12,6 @@ exec --no-startup-id urxvtd -f
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.*
-exec_always --no-startup-id xrdb -merge ~/.config/.Xresources
 
 exec --no-startup-id xbindkeys
 exec --no-startup-id picom
@@ -22,3 +21,5 @@ exec --no-startup-id spotify %U
 exec --no-startup-id thunderbird
 
 exec_always --no-startup-id alternating_layouts.py
+exec_always --no-startup-id xrdb -merge ~/.config/.Xresources
+
