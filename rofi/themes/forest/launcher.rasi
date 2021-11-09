@@ -20,7 +20,7 @@ configuration {
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					true;
-    dpi:                            168;
+    dpi:                            96;
     modi:                           ":greenclip print,drun";
 
 }

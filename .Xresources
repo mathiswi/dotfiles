@@ -3,7 +3,7 @@
 #include "colorschemes/nord"
 
 
-Xft.dpi:       168
+Xft.dpi:       96
 !Xft.dpi:       196
 
 
