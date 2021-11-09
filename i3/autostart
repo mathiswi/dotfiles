@@ -5,7 +5,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id ~/.screenlayout/standard.sh
 
 exec --no-startup-id numlockx on
-exec --no-startup-id dunst
+exec --no-startup-id xrdb -merge ~/.config/.Xresources & dunst
 exec --no-startup-id kde-connect
 
 exec --no-startup-id urxvtd -f

@@ -35,6 +35,10 @@ Change wallpaper in `/etc/lightdm/slick-greeter.conf`
 background = /etc/lightdm/wallpaper/wallpaper.jpg
 ```
 
+## Firefox theme
+
+[Darkish Nord](https://addons.mozilla.org/en-US/firefox/addon/nord-theme-cool/?src=search)
+
 
 ## Spotify themes
 
@@ -46,8 +50,7 @@ sudo chmod a+wr /opt/spotify/Apps -R && \
 spicetify && \
 spicetify backup apply enable-devtool && \
 spicetify config current_theme Sleek && \
-spicetify apply  && \
-spicetify config color_theme nord && \
+spicetify config color_scheme nord && \
 spicetify apply
 ```
 

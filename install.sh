@@ -6,6 +6,8 @@ init() {
   mkdir -p ~/Projects
   echo -e "Removing .Xresources in home directory"
   rm ~/.Xresources
+  echo -e "Removing old i3-config in home directory"
+
   rm -rf ~/.config/i3
 }
 
@@ -26,7 +28,7 @@ install_packages() {
   # Code editor
   yay -S visual-studio-code-bin --noconfirm
   # Editor font
-  yay -S otf-fira-code --noconfirm
+  yay -S ttf-fira-code --noconfirm
   # Browser
   yay -S firefox-developer-edition --noconfirm
   # Media controls
@@ -47,6 +49,10 @@ install_packages() {
   yay -S rxvt-unicode --noconfirm 
   # scroll tool for spotify polybar
   yay -S zscroll --noconfirm
+  # backlight control
+  yay -S xorg-xbacklight --noconfirm
+  # gnome keyring
+  yay -S gnome-keyring --noconfirm
 }
 
 
@@ -96,10 +102,10 @@ install_fonts() {
 }
 
 
-init
-install_packages
+#init
+#install_packages
 
-misc
-install_fonts
+#misc
+#install_fonts
 # backlight_fix
 init_zsh
