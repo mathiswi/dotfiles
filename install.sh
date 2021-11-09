@@ -15,8 +15,6 @@ install_packages() {
   pacman -S yay --noconfirm
   # Application launcher & several other menus
   yay -S rofi --noconfirm
-  # i3-gaps-next
-  yay -S i3-gaps-next-git --noconfirm
   # zsh
   yay -S zsh --noconfirm
   # Clipboard manager
@@ -26,7 +24,7 @@ install_packages() {
   # Code editor
   yay -S visual-studio-code-bin --noconfirm
   # Editor font
-  yay -S otf-fira-code --noconfirm
+  yay -S ttf-fira-code --noconfirm
   # Browser
   yay -S firefox-developer-edition --noconfirm
   # Media controls
@@ -47,6 +45,16 @@ install_packages() {
   yay -S rxvt-unicode --noconfirm 
   # scroll tool for spotify polybar
   yay -S zscroll --noconfirm
+  # lockscreen
+  yay -S betterlockscreen --noconfirm
+  # bluetooth manager
+  yay -S blueman --noconfirm
+  # brightness manager
+  yay -S brightnessctl --noconfirm
+  # clipboard for screenshots
+  yay -S xclip --noconfirm
+  # gnome keyring for vscode
+  yay -S gnome-keyring --noconfirm
 }
 
 
@@ -58,32 +66,18 @@ enable_services() {
 misc() {
   echo -e $'\n### Misc ###\n'
   # Set wallpaper of lockscreen
-  # betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
+  betterlockscreen -u ~/.config/wallpaper/wallpaper.* 
   # merge .Xresources
   xrdb merge ~/.config/.Xresources
   # restart i3
   i3-msg restart
-  # copy spotify desktop file (4k screen resolution fix)
-  sudo cp spotify.desktop /usr/share/applications/
+
 }
 
 init_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
-# Fix for backlight control for OLED Panel
-backlight_fix() {
-  echo -e $'\n### Fixing Backlight ###\n'
-  sudo pacman -S inotify-tools bc --noconfirm
-  sudo cp xbacklightmon /usr/local/bin 
-  sudo chown root:root /usr/local/bin/xbacklightmon 
-  sudo chmod 755 /usr/local/bin/xbacklightmon 
-  sudo cp xbacklightmon.service /usr/lib/systemd/user 
-  systemctl --user enable --now xbacklightmon.service 
-  xbacklight +50 
-}
-
-# Install Fonts
 install_fonts() {
   FDIR="$HOME/.local/share/fonts"
 	echo -e $'\n### Installing Fonts ###\n'
@@ -98,8 +92,7 @@ install_fonts() {
 
 init
 install_packages
-
 misc
 install_fonts
-# backlight_fix
+enable_services
 init_zsh

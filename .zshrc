@@ -1,12 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
@@ -20,30 +14,18 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
 
-
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias loadnvm=". $HOME/.nvm/nvm.sh"
 alias merge="xrdb merge ~/.config/.Xresources"
-# sdo() sudo zsh -c "$functions[$1]" "$@"
 
-# change_wallpaper() {
-#   sed -i '$d' ~/.config/bspwm/bspwmrc ;
-#   echo "feh --bg-fill $1 &" > ~/.config/bspwm/bspwmrc ;
-#   reload_bspwm
-# }
 
-# new() {
-#   sed -i '$d' ~/.config/bspwm/bspwmrc &&
-#   echo "feh --bg-fill $1 &" > ~/.config/bspwm/bspwmrc &&
-#   reload_bspwm &&
-#   cp $1 /etc/lightdm/wallpaper/wallpaper.jpg &&
-#   sed -i '$ d' /etc/lightdm/slick-greeter.conf &&
-#   echo "background = /etc/lightdm/wallpaper/wallpaper.jpg" > /etc/lightdm/slick-greeter.conf
-# }
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export BROWSER=firefox-developer-edition
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"

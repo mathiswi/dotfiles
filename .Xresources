@@ -9,7 +9,7 @@ Xft.dpi:       96
 
 URxvt*dynamicColors: on
 Xcursor.theme: xcursor-breeze
-Xcursor.size:  48
+Xcursor.size:  24
 URxvt.font:                       xft:Iosevka:size=12
 
 URxvt.depth:                      32

@@ -1,6 +1,7 @@
 
 link_config() {
   echo -e $'\n### Linking Config ###\n'
+  rm ~/.zshrc
   ln -sv ~/dotfiles/i3 ~/.config/
   ln -sv ~/dotfiles/colorschemes ~/.config/
   ln -sv ~/dotfiles/networkmanager-dmenu ~/.config/
@@ -16,3 +17,4 @@ link_config() {
 }
 
 link_config
+xrdb merge ~/.config/.Xresources
