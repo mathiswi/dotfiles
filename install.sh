@@ -38,7 +38,7 @@ install_packages() {
   # terminal font
   yay -S ttf-iosevka --noconfirm
   # spotify customization
-  yay -S spicetify-cli spicetify-themes-git --noconfirm
+  # yay -S spicetify-cli spicetify-themes-git --noconfirm
   # notification deamon
   yay -S dunst --noconfirm
   # urxvt terminal
@@ -55,6 +55,11 @@ install_packages() {
   yay -S xclip --noconfirm
   # gnome keyring for vscode
   yay -S gnome-keyring --noconfirm
+  yay -S pulseaudio-bluetooth --noconfirm
+  yay -S python-i3ipc --noconfirm
+  yay -S alternating-layouts-git --noconfirm
+  yay -S github-cli --noconfirm
+  yay -S gitkraken --noconfirm
 }
 
 
