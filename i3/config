@@ -33,9 +33,10 @@ set $ws10 10
 
 
 # Open applications on specific workspaces
-assign [class="firefox"] $ws1
+assign [class="firefoxdeveloperedition"] $ws1
 assign [class="URxvt"] $ws3
 
+for_window [class="jetbrains-webstorm"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws2
 for_window [class="GitKraken"] move to workspace $ws8
 for_window [class="Spotify"] move to workspace $ws9
