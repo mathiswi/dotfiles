@@ -131,8 +131,8 @@ bindsym $mod+a focus parent
 
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight +10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -10; notify-send 'brightness down'"
 
 # Volume Controls
 bindsym XF86AudioRaiseVolume exec "amixer -q -D pulse set Master 3%+ unmute"
