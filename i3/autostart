@@ -2,7 +2,7 @@
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-exec_always --no-startup-id ~/.screenlayout/standard.sh
+exec_always --no-startup-id ~/.screenlayout/home.sh
 
 exec --no-startup-id numlockx on
 exec --no-startup-id xrdb -merge ~/.config/.Xresources & dunst
@@ -20,6 +20,6 @@ exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id spotify %U
 exec --no-startup-id thunderbird
 
-exec_always --no-startup-id alternating_layouts.py
+exec --no-startup-id alternating_layouts.py
 exec_always --no-startup-id xrdb -merge ~/.config/.Xresources
 

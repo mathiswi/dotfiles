@@ -40,23 +40,28 @@ install_packages() {
   # terminal font
   yay -S ttf-iosevka --noconfirm
   # spotify customization
-  yay -S spicetify-cli spicetify-themes-git --noconfirm
+  # yay -S spicetify-cli spicetify-themes-git --noconfirm
   # notification deamon
   yay -S dunst --noconfirm
   # urxvt terminal
   yay -S rxvt-unicode --noconfirm 
   # scroll tool for spotify polybar
   yay -S zscroll --noconfirm
-  # backlight control
-  yay -S xorg-xbacklight --noconfirm
-  # gnome keyring
-  yay -S gnome-keyring --noconfirm
-  yay -S xclip --noconfirm
-  # clipboard for screenshots
-  yay -S blueman --noconfirm
-  # bluetooth manager
-  yay -S betterlockscreen --noconfirm
   # lockscreen
+  yay -S betterlockscreen --noconfirm
+  # bluetooth manager
+  yay -S blueman --noconfirm
+  # brightness manager
+  yay -S brightnessctl --noconfirm
+  # clipboard for screenshots
+  yay -S xclip --noconfirm
+  # gnome keyring for vscode
+  yay -S gnome-keyring --noconfirm
+  yay -S pulseaudio-bluetooth --noconfirm
+  yay -S python-i3ipc --noconfirm
+  yay -S alternating-layouts-git --noconfirm
+  yay -S github-cli --noconfirm
+  yay -S gitkraken --noconfirm
 }
 
 

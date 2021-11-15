@@ -49,10 +49,12 @@ export BROWSER=firefox-developer-edition
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+export PATH="/usr/local/bin/:$PATH"
 
 timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
-
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
