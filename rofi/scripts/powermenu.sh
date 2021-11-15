@@ -41,7 +41,7 @@ case $chosen in
     $suspend)
 			playerctl pause
 			amixer set Master mute
-			systemctl suspend
+			betterlockscreen -l dim & systemctl suspend
         ;;
     $logout)
 			if [[ "$DESKTOP_SESSION" == "Openbox" ]]; then
