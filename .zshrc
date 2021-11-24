@@ -56,5 +56,12 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
+reload_monitors() {
+  ~/.screenlayout/reset.sh
+  sleep 3
+  ~/.screenlayout/home.sh
+  reload_polybar
+}
+
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
