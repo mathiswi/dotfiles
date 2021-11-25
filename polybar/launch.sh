@@ -13,12 +13,12 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
 
-polybar -q main -c "$DIR"/"$STYLE"/config.ini
+#polybar -q main -c "$DIR"/"$STYLE"/config.ini
 
-# if type "xrandr"; then
-#   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-#     MONITOR=$m polybar -q main -c "$DIR"/"$STYLE"/config.ini &
-#   done
-# else
-#   polybar --reload topBar &
-# fi
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar -q main -c "$DIR"/"$STYLE"/config.ini &
+  done
+else
+  polybar --reload topBar &
+fi
