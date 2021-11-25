@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+DIR=$HOME/dotfiles/
 
 init() {
   echo -e "Creating Projects folder if it doesn't already exist"
@@ -40,7 +41,7 @@ install_packages() {
   # terminal font
   yay -S ttf-iosevka --noconfirm
   # spotify customization
-  # yay -S spicetify-cli spicetify-themes-git --noconfirm
+  yay -S spicetify-cli spicetify-themes-git --noconfirm
   # notification deamon
   yay -S dunst --noconfirm
   # urxvt terminal
@@ -57,10 +58,14 @@ install_packages() {
   yay -S xclip --noconfirm
   # gnome keyring for vscode
   yay -S gnome-keyring --noconfirm
+  # Bluetooth Manager for Audio
   yay -S pulseaudio-bluetooth --noconfirm
+  # Fibonacci Layouting
   yay -S python-i3ipc --noconfirm
   yay -S alternating-layouts-git --noconfirm
+  # Github CLI
   yay -S github-cli --noconfirm
+  # Git GUI
   yay -S gitkraken --noconfirm
 }
 
@@ -87,6 +92,7 @@ init_zsh() {
 
 install_fonts() {
   FDIR="$HOME/.local/share/fonts"
+  mkdir -p $FDIR
 	echo -e $'\n### Installing Fonts ###\n'
 	if [[ -d "$FDIR" ]]; then
 		cp -rf $DIR/fonts/* "$FDIR"
@@ -97,9 +103,9 @@ install_fonts() {
 }
 
 
-init
-install_packages
-misc
+#init
+#install_packages
+#misc
 install_fonts
-enable_services
+#enable_services
 init_zsh

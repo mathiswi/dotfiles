@@ -4,7 +4,6 @@ link_config() {
   rm ~/.zshrc
   ln -sv ~/dotfiles/i3 ~/.config/
   ln -sv ~/dotfiles/colorschemes ~/.config/
-  ln -sv ~/dotfiles/networkmanager-dmenu ~/.config/
   ln -sv ~/dotfiles/polybar ~/.config/
   ln -sv ~/dotfiles/rofi ~/.config/
   ln -sv ~/dotfiles/wallpaper ~/.config/
