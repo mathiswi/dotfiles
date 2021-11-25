@@ -4,17 +4,17 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec_always --no-startup-id ~/.screenlayout/home.sh
 
-# exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 exec --no-startup-id dunst
 # exec --no-startup-id kde-connect
 
 exec --no-startup-id urxvtd -f
 
+exec --no-startup-id greenclip daemon
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.*
 
 # exec --no-startup-id xbindkeys
-# exec --no-startup-id picom
 exec --no-startup-id kdeconnect-indicator
 
 exec --no-startup-id spotify %U
