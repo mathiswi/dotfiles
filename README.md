@@ -1,9 +1,8 @@
 # my dotfiles
 
 * WIP 
-* bspwm & polybar
+* i3 & polybar
 * Credits to most of the polybar and rofi config go to [adi1090x](https://github.com/adi1090x/polybar-themes)
-* Optimized for a 4k screen
 
 
 ## Themes
@@ -34,10 +33,6 @@ Change wallpaper in `/etc/lightdm/slick-greeter.conf`
 ```
 background = /etc/lightdm/wallpaper/wallpaper.jpg
 ```
-
-## Firefox theme
-
-[Darkish Nord](https://addons.mozilla.org/en-US/firefox/addon/nord-theme-cool/?src=search)
 
 
 ## Spotify themes
@@ -73,29 +68,4 @@ Option "AccelSpeed" "1.8"
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
-# Dell XPS Specific
-
-## Brightness (if not already applied with install script)
-
-```
-sudo pacman -S inotify-tools bc
-```
-
-Create Script for changing brightness
-```
-sudo cp xbacklightmon /usr/local/bin && \
-sudo chown root:root /usr/local/bin/xbacklightmon && \
-sudo chmod 755 /usr/local/bin/xbacklightmon
-```
-Enable Systemd Service 
-
-```
-sudo cp xbacklightmon.service /usr/lib/systemd/user
-systemctl --user enable xbacklightmon.service
-```
-
-## Change Sleep to more efficient deep sleep
-```
-echo deep|sudo tee /sys/power/mem_sleep
-```
 
