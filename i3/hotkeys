@@ -176,6 +176,9 @@ bindsym $mod+F1 exec firefox-developer-edition; workspace $ws1
 # launch vscode
 bindsym $mod+F2 exec code; workspace $ws2
 
+# launch chrome
+bindsym $mod+F6 exec google-chrome-stable; workspace $ws6
+
 # open i3 keybindingmenu
 bindsym $mod+F11 exec i3keybindingsmenu
 
