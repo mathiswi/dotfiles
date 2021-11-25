@@ -50,6 +50,7 @@ export BROWSER=firefox-developer-edition
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 export PATH="/usr/local/bin/:$PATH"
+export PATH="$HOME/bin/:$PATH"
 
 timezsh() {
   shell=${1-$SHELL}
