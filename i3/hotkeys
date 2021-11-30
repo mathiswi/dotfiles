@@ -193,11 +193,6 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-# start rofi filesearch
-# bindsym $mod+Shift+f exec --no-startup-id xdg-open "$(locate home media | rofi -threads 0 -dmenu -i -p "filesearch: ")"
-
-# bindsym $mod+F3 exec --no-startup-id $HOME/.local/bin/rofi/rofi-websearch.sh
-
 ## Resizing ##
 
 # resize window (you can also use the mouse for that):
@@ -219,7 +214,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-#bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
