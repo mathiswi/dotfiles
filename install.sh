@@ -103,9 +103,9 @@ install_fonts() {
 }
 
 
-#init
-#install_packages
-#misc
+init
+install_packages
+misc
 install_fonts
-#enable_services
+enable_services
 init_zsh
