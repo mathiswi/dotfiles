@@ -83,13 +83,11 @@ bindsym $mod+Shift+Mod2+KP_8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+Mod2+KP_9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+Mod2+KP_0 move container to workspace $ws10; workspace $ws10
 
-# Move Workspace to left Monitor
-bindsym $mod+i move workspace to output left
 
-# Move Workspace to primary Monitor
-bindsym $mod+o move workspace to output primary
+# Move Workspace to monitor on the left
+bindsym $mod+o move workspace to output left
 
-# Move Workspace to right Monitor
+# Move Workspace to monitor on the right
 bindsym $mod+p move workspace to output right
 
 
