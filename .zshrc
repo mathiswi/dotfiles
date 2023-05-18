@@ -26,7 +26,6 @@ export NVM_COMPLETION=true
 plugins=(
   zsh-nvm
   git
-  k
   sudo
 )
 
@@ -66,3 +65,5 @@ reload_monitors() {
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

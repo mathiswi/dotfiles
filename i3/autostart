@@ -15,11 +15,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.*
 
 # exec --no-startup-id xbindkeys
-exec --no-startup-id kdeconnect-indicator
 
 exec --no-startup-id spotify %U
-exec --no-startup-id thunderbird
 
 exec --no-startup-id alternating_layouts.py
 exec_always --no-startup-id xrdb -merge ~/.config/.Xresources
-
